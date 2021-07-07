@@ -1,0 +1,303 @@
+*:focus {
+	outline: none;
+}
+body{
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+}
+.anchor-helper{
+	padding-top: 74px;
+	margin-top: -74px;
+}
+
+/*===MODAL===*/
+
+
+.overlay {
+   
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 20;
+	transition: .5s all;
+}
+
+.modal-image {
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: fit-content;
+    height: 90vh;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: 0.5s all;
+}
+
+.modal-close {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	fill: #444;
+	cursor: pointer;
+}
+.img-modal{
+	position: relative;
+	height: 100%;
+	max-height: 90vh;
+	max-width: 90vw;
+	object-fit: cover;
+}
+
+.modal-image.active,
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}
+/*===HEADER===*/
+header{
+	position: relative;
+}
+.header {
+	background-color: #a06e4b;
+	color: #e3e3e3;
+	font-family: izhitsa;
+	transition: .2s linear;
+}
+.header.hide{
+	transform:translateY(-74px);
+	transition: transform .2s linear;
+}
+.navbar-brand{
+	color: #fff;
+	font-size: 2rem;
+	text-decoration: stroke;
+	text-transform: uppercase;
+}
+.nav-link{
+	color: #e3e3e3;
+	font-size: 1.2rem;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+.nav-link:hover, .nav-link:focus,
+.navbar-brand:hover, .navbar-brand:focus{
+	color: #fff;
+	text-decoration:underline;
+}
+.navbar-toggler:focus{
+	box-shadow: none;
+}
+.header-mobile{
+	padding-top: -74px;
+	margin-top: 74px;
+	height: 50vh;
+	width: 100%;
+	background-image:url("../img/logo.png"), url("../img/carousel/logo_background.jpg");
+	background-repeat: no-repeat;
+	background-size: contain, cover;
+	background-position: center;
+}
+/*===CAROUSEL===*/
+.inner{
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.inner-item-1{
+	background-image: url("../img/carousel/logo_background.jpg");
+}
+.inner-item-2{
+	background-image: url("../img/carousel/CoffeCup.jpg");
+}
+.inner-item-3{
+	background-image: url("../img/carousel/nuts.jpg");
+}
+.inner-item-4{
+	background-image: url("../img/carousel/front.jpg");
+}
+.inner-item-5{
+	background-image: url("../img/carousel/klubnika.jpg");
+}
+.inner-item-6{
+	background-image: url("../img/carousel/stellazh.jpg");
+}
+.carousel-caption{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo-img{
+	max-width: 80vw;
+	}
+.logo-img-animation{
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	animation-delay: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;	transform: scale(0.2);}
+	70%	{opacity: 1;}
+	100% {transform: scale(1)}
+	}
+@keyframes fadeIn {
+	0% {opacity: 0;	transform: scale(0.2);}
+	70%	{opacity: 1;}
+	100% {transform: scale(1)}
+	}
+.header-scroller {
+	z-index: 1;
+	position: absolute;
+	bottom: 2.5rem;
+	left: 50%;
+	margin: 0 0 0 -1.3rem;
+	width: 2.6rem;
+	height: 4rem;
+	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI2IDQwIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmZmIiBkPSJNNjUwLDgzNWExMywxMywwLDAsMSwxMywxM3YxNGExMywxMywwLDAsMS0yNiwwVjg0OEExMywxMywwLDAsMSw2NTAsODM1Wm0wLDJhMTEsMTEsMCwwLDEsMTEsMTF2MTRhMTEsMTEsMCwwLDEtMjIsMFY4NDhBMTEsMTEsMCwwLDEsNjUwLDgzN1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02MzcgLTgzNSkiLz4NCjwvc3ZnPg0K) 50% 50% no-repeat;
+	background-size: 100%;
+}
+.header-scroller:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	margin-left: -0.2rem;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 0.2rem;
+	background-color: #fff;
+	-webkit-animation: scrollto 1.5s infinite linear;
+	animation: scrollto 1.5s infinite linear;
+}
+	
+	@-webkit-keyframes scrollto {
+		from, to {
+			-webkit-transform: scaleY(1) translateY(0);
+							transform: scaleY(1) translateY(0); }
+		25% {
+			-webkit-transform: scaleY(2) translateY(0.15rem);
+							transform: scaleY(2) translateY(0.15rem); }
+		50% {
+			-webkit-transform: scaleY(1) translateY(0.3rem);
+							transform: scaleY(1) translateY(0.3rem); } }
+	
+	@keyframes scrollto {
+		from, to {
+			-webkit-transform: scaleY(1) translateY(0);
+							transform: scaleY(1) translateY(0); }
+		25% {
+			-webkit-transform: scaleY(2) translateY(0.15rem);
+							transform: scaleY(2) translateY(0.15rem); }
+		50% {
+			-webkit-transform: scaleY(1) translateY(0.3rem);
+							transform: scaleY(1) translateY(0.3rem); } }
+		
+
+/*===ABOUT===*/
+.about{
+	color: #4c505d;
+}
+.section-title{
+	font-family: izhitsa;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.section-text{
+	font-size: 1rem;
+}
+.section-img{
+	max-width: 100%;
+}
+
+/*===ODD===*/
+.odd{
+	background-color: #a06e4b;
+	color: #e3e3e3;
+}
+.odd-image{
+	overflow: hidden;
+}
+.odd-thumbnail{
+	cursor: zoom-in;
+	transition: 0.5s;
+}
+.odd-thumbnail:hover{
+	transform:scale(1.05);
+}
+
+/*===CONTACTS===*/
+.contacts{
+
+	color: #4c505d;
+}
+.contacts-inner{
+	margin-bottom: 0.5rem;
+}
+.icon{
+	font-size: 1.5rem;
+	color: #4c505d;
+	opacity: 0.8;
+	margin-right: 1rem;
+	/* transition: all 0.5s; */
+}
+.icon:last-child{
+	margin-right: 0;
+}
+.icon:hover{
+	opacity: 1;
+}
+.icon:nth-child(even):hover{
+	color: #298af1;
+}
+.icon:nth-child(odd):hover{
+	background: linear-gradient(45deg, #f3bc75 33%, #e0675f 66%, #9e33a8);
+  -webkit-background-clip: text;
+	background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+}
+
+/*===FOOTER===*/
+.footer{
+	background-color: #a06e4b;
+	color: #e3e3e3;
+}
+.footer .col{
+	text-align: center;
+}
+/*===ELSE===*/
+
+@font-face {
+	font-family: "izhitsa"; 
+	src: url("../fonts/Izhitsa.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal; 
+	}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://kit.fontawesome.com/3db6035012.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Добродедово</title>
+	</head>
+	<body data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
+		<!-- Modal -->
+		<div class="modal-image">
+			<!--   Svg иконка для закрытия окна  -->
+			<svg
+				class="modal-close"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+			>
+				<path
+					d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+				/>
+			</svg>
+			<img class="img-modal" src="" alt="" />
+		</div>
+		<div class="overlay" id="overlay-modal"></div>
+		<header id="header">
+			<div class="header fixed-top">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-dark">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#header">Добродедово</a>
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#burgerMenu"
+								aria-controls="burgerMenu"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div
+								class="collapse navbar-collapse justify-content-end"
+								id="burgerMenu"
+							>
+								<ul class="navbar-nav mb-2 mb-lg-0">
+									<li class="nav-item">
+										<a
+											class="nav-link active"
+											href="#header"
+											onClick="closeMenu()"
+											>Главная</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#about" onClick="closeMenu()"
+											>О нас</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#odd" onClick="closeMenu()"
+											>Отдел добрых дел</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#contacts" onClick="closeMenu()"
+											>Контакты</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="header-mobile d-block d-lg-none"></div>
+			<div
+				id="carousel"
+				class="d-none d-lg-block carousel slide carousel-fade"
+				data-bs-ride="carousel"
+				data-bs-pause="false"
+			>
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="3"
+						aria-current="true"
+						aria-label="Slide 4"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="4"
+						aria-label="Slide 5"
+					></button>
+					<button
+						type="button"
+						data-bs-target="#carousel"
+						data-bs-slide-to="5"
+						aria-label="Slide 6"
+					></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="inner inner-item-1"></div>
+						<div class="carousel-caption">
+							<img
+								class="logo-img logo-img-animation"
+								src="img/logo.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="inner inner-item-2"></div>
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Метка первого слайда</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="inner inner-item-3"></div>
+					</div>
+					<div class="carousel-item">
+						<div class="inner inner-item-4"></div>
+					</div>
+					<div class="carousel-item">
+						<div class="inner inner-item-5"></div>
+					</div>
+					<div class="carousel-item">
+						<div class="inner inner-item-6"></div>
+					</div>
+				</div>
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#carousel"
+					data-bs-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Предыдущий</span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#carousel"
+					data-bs-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Следующий</span>
+				</button>
+			</div>
+			<div class="header-scroller d-none d-lg-block"></div>
+		</header>
+		<main>
+			<div id="about" class="anchor-helper"></div>
+			<section class="about">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<p class="section-title p-3 m-0">
+								Магазин Добродедово имеет широкий ассортимент товаров
+							</p>
+							<p class="section-text pb-3 m-0">
+								Мы рады предложить вам широкий ассортимент высококачественной
+								продукции мировых брэндов: Fiesta (Испания), Productos Damel
+								(Испания), Jake (Испания), Dulce Plus (Испания). Продукция имеет
+								мировой сертификат качества! Всегда свежие овощи и фрукты
+								Огромный выбор кофе и чая по доступным ценам! Свежая выпечка,
+								молочные продукты, домашние соленья и многое другое!
+							</p>
+						</div>
+					</div>
+					<div class="row pb-4 justify-content-center">
+						<div class="col-6 col-lg p-2">
+							<img
+								class="img-thumbnail section-img"
+								src="img/about/stellazh.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="col-6 col-lg p-2">
+							<img
+								class="img-thumbnail section-img"
+								src="img/about/vypechka.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="col-6 col-lg p-2">
+							<img
+								class="img-thumbnail section-img"
+								src="img/about/pomidor.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="col-6 col-lg p-2">
+							<img
+								class="img-thumbnail section-img"
+								src="img/about/marmelad.jpg"
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div id="odd" class="anchor-helper"></div>
+			<section class="odd">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<p class="section-title p-3 m-0">Отдел добрых дел</p>
+							<p class="section-text pb-3 m-0">
+								Не секрет, что вокруг нас есть люди, которые живут на небольшие
+								зарплаты и пенсии, есть семьи, в которых кто-то тяжело болеет
+								или попал в сложную ситуацию, когда приходится считать каждую
+								копейку. Для таких людей мы ввели благотворительные талоны. Тот
+								кто хочет сделать доброе дело, может приобрести их у наших
+								продавцов, вписав сумму пожертвования в талон и прикрепить его
+								на стенд с надписью <b>ОТДЕЛ ДОБРЫХ ДЕЛ</b>. Любой, кто
+								нуждается, возьмёт и обменяет его на продукты первой
+								необходимости! Мы, в свою очередь, обратились в Красный крест и
+								Социальную службу Партизанского района, чтобы нам подсказали
+								кому действительно нужна помощь и сделали наше первое
+								#доброедело
+							</p>
+						</div>
+					</div>
+					<div class="row pb-3">
+						<div class="odd-image col-6 col-lg p-2">
+							<img
+								class="odd-thumbnail img-thumbnail section-img"
+								src="img/otdel/otdel_1.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="odd-image col-6 col-lg p-2">
+							<img
+								class="odd-thumbnail img-thumbnail section-img"
+								src="img/otdel/otdel_2.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="odd-image col-6 col-lg p-2">
+							<img
+								class="odd-thumbnail img-thumbnail section-img"
+								src="img/otdel/otdel_3.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="odd-image col-6 col-lg p-2">
+							<img
+								class="odd-thumbnail img-thumbnail section-img"
+								src="img/otdel/otdel_4.jpg"
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div id="contacts" class="anchor-helper"></div>
+			<section class="contacts">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<p class="section-title p-3 m-0">Контакты</p>
+						</div>
+						<div class="col-12 pb-4 col-lg">
+							<p class="mb-2"><b>Адрес:</b></p>
+							<p class="contacts-inner">Магазин Добродедово</p>
+							<p class="contacts-inner">г. Минск, микрорайон Степянка,</p>
+							<p class="contacts-inner">ул. Связистов, д. 11</p>
+						</div>
+						<div class="col-12 pb-4 col-lg">
+							<p class="mb-2"><b>График работы:</b></p>
+							<p class="contacts-inner">Пн. - Вс.: 9:00 - 21:0</p>
+							<p class="contacts-inner">Без выходных</p>
+							<p class="contacts-inner">Сан. день: Последнее Вс месяца</p>
+						</div>
+						<div class="col-12 pb-4 col-lg">
+							<p class="mb-2"><b>Телефон:</b></p>
+							<p class="contacts-inner">+375 17 757-47-85</p>
+							<p class="contacts-inner">Связаться с нами:</p>
+							<a class="icon" href="https://vk.com/dobrodedovo"
+								><i class="fa fa-vk" aria-hidden="true"></i
+							></a>
+							<a class="icon" href="https://www.instagram.com/dobrodedovo/"
+								><i class="fa fa-instagram" aria-hidden="true"></i
+							></a>
+							<a class="icon" href="mailto:dr.sisoy2013@yandex.by"
+								><i class="fa fa-envelope" aria-hidden="true"></i
+							></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<p class="section-title p-3 m-0">Мы на карте</p>
+						</div>
+						<div class="col-12">
+							<script
+								type="text/javascript"
+								charset="utf-8"
+								async
+								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Add435caca1053e6569c4c00162bc1264342fc6779967525354e16e3f302cab9e&amp;width=100%25&amp;height=60vh&amp;lang=ru_RU&amp;scroll=true"
+							></script>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col p-2">
+						<span>Индивидуальный предприниматель Сысой Е.В. УНП 192461328</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

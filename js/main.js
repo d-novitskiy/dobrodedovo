@@ -8,8 +8,6 @@ function hideHeader() {
 	let position = 74;
 	let header = document.querySelector(".header");
 	window.addEventListener("scroll", function () {
-		console.log(window.pageYOffset);
-
 		if (
 			window.pageYOffset > 74 &&
 			window.pageYOffset > position &&
@@ -21,7 +19,6 @@ function hideHeader() {
 			header.classList.contains("hide")
 		) {
 			header.classList.remove("hide");
-			console.log(position);
 		}
 		position = window.pageYOffset;
 	});
@@ -38,12 +35,10 @@ function closeMenu() {
 function showImage() {
 	let image = [...document.querySelectorAll(".odd-thumbnail")];
 	let source = document.querySelector(".img-modal").src;
-	console.log(source);
 	for (let i = 0; i < image.length; i++) {
 		const el = image[i];
-		console.log(el);
+
 		el.addEventListener("click", () => {
-			console.log(el.src);
 			document.querySelector(".img-modal").src = el.src;
 			document.querySelector(".modal-image").classList.add("active");
 			document.querySelector(".overlay").classList.add("active");
